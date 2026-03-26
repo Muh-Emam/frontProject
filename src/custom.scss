@@ -1,0 +1,101 @@
+/* src/custom.scss */
+
+// 1. Define Hekto Brand Colors from Figma
+$pink: #fb2e86; // Primary
+$purple: #7e33e0; // Secondary
+$off-white: #f2f0ff; // Tertiary/Background
+$midnight-blue: #0d0e43; // Text Heading Color
+
+// 2. Map them to Bootstrap's variable system
+$primary: $pink;
+$secondary: $purple;
+$light: $off-white;
+$dark: $midnight-blue;
+
+$body-color: #8a8fb9; // The grayish-blue used for sub-text in Hekto
+
+// 3. Import Bootstrap's SCSS
+@use "bootstrap/scss/bootstrap" with (
+  $primary: $primary,
+  $dark: $dark,
+  $secondary: $secondary,
+  $light:$light
+);
+
+// 4. Custom font application (from our previous step)
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: "Josefin Sans", sans-serif;
+  color: $midnight-blue;
+  font-weight: 700;
+}
+
+.navbar-brand {
+  font-size: 34px;
+}
+
+.nav-link {
+  color: #151875; // Design navy
+
+  &.active {
+    color: $pink !important; // Turns pink when on that page
+  }
+
+  &:hover {
+    color: $pink;
+  }
+}
+
+.form-control {
+  border: 2px solid #C2C5E1; // The Hekto light-blue border
+  &:focus {
+    border-color: #FB2E86; // Pink on focus
+    box-shadow: none;
+  }
+}
+
+.product-card {
+  transition: all 0.3s ease-in-out; /* Smooth transition for everything */
+  border: 1px solid transparent;
+}
+
+.product-card:hover {
+  transform: scale(1.03); /* Grows the card by 3% */
+  z-index: 10; /* Ensures the growing card stays on top of others */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  border-color: #7E33E0; /* Optional: adds a thin purple border on hover */
+}
+
+.product-card:hover img {
+  filter: brightness(1.05); /* Makes the product "pop" a bit more */
+}
+
+.btn-pink-outline:hover {
+  color: white !important; /* Forces text to be white when background is pink */
+}
+
+.btn-pink-outline:disabled {
+  color: grey;
+  border-color: lightgrey;
+}
+.btn-purple-outline:hover {
+  color: white !important; /* Forces text to be white when background is pink */
+}
+
+.btn-purple-outline:disabled {
+  color: grey;
+  border-color: lightgrey;
+}
+
+a {
+  color: $dark;
+}
