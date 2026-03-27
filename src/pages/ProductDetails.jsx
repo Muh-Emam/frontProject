@@ -103,9 +103,16 @@ function ProductDetails() {
                   <span className="fw-bold" style={{ color: "#151875" }}>
                     Share:
                   </span>
-                  <i className="bi bi-facebook fs-5 text-primary" style={{ cursor: "pointer" }}></i>
-                  <i className="bi bi-instagram fs-5 text-danger" style={{ cursor: "pointer" }}></i>
-                  <i className="bi bi-twitter fs-5 text-info" style={{ cursor: "pointer" }}></i>
+
+                  <a href="https://www.facebook.com" target="_blank" style={{fontSize: "20px"}}>
+                    <i className="bi bi-facebook pointer"></i>
+                  </a>
+                  <a href="https://www.instagram.com" target="_blank" style={{fontSize: "20px"}}>
+                    <i className="bi bi-instagram pointer"></i>
+                  </a>
+                  <a href="https://www.twitter.com" target="_blank" style={{fontSize: "20px"}}>
+                    <i className="bi bi-twitter pointer"></i>
+                  </a>
                 </div>
               </div>
             </div>

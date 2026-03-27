@@ -1,4 +1,4 @@
-const Pagination = ({ skip, limit, totalItems, setSkip }) => {
+const Pagination = ({ skip, limit, totalItems, setSkip, loading }) => {
   // Logic to handle the "Showing X - Y of Z" text
   const start = totalItems === 0 ? 0 : skip + 1;
   const end = Math.min(skip + limit, totalItems);
@@ -16,9 +16,7 @@ const Pagination = ({ skip, limit, totalItems, setSkip }) => {
 
       {/* Dynamic Status Text */}
       <span className="fw-bold text-muted">
-        {totalItems === 0 
-          ? "None to Show" 
-          : `Showing ${start} - ${end} of ${totalItems}`}
+        {totalItems === 0 || loading ? "None to Show" : `Showing ${start} - ${end} of ${totalItems}`}
       </span>
 
       {/* Next Button */}

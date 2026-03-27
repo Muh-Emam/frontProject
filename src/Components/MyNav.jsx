@@ -13,9 +13,6 @@ function MyNav({ user }) {
               <NavLink to="/" className="nav-link">
                 Home
               </NavLink>
-              <NavLink to="/login" className="nav-link">
-                Login
-              </NavLink>
               <NavLink to="/profile" className="nav-link">
                 Profile
               </NavLink>
@@ -24,6 +21,9 @@ function MyNav({ user }) {
               </NavLink>
               <NavLink to="/cart" className="nav-link">
                 Cart
+              </NavLink>
+              <NavLink to="/login" className="nav-link">
+                Login
               </NavLink>
               {user?.role === "admin" && (
                 <>

@@ -79,7 +79,6 @@ function Products() {
                     className="btn btn-outline-primary btn-pink-outline btn-sm dropdown-toggle"
                     type="button"
                     data-bs-toggle="dropdown"
-                    style={{ borderColor: "#fb2e86", color: "#fb2e86" }}
                   >
                     {sortBy ? sortBy.charAt(0).toUpperCase() + sortBy.slice(1) : "Sort By"}
                   </button>
@@ -247,7 +246,7 @@ function Products() {
                         className="btn btn-sm btn-primary"
                         onClick={(e) => {
                           e.stopPropagation();
-                          dispatch(addToCart(item));
+                          dispatch(addToCart(item))
                         }}
                       >
                         Add to Cart
@@ -259,7 +258,7 @@ function Products() {
             ))
           )}
         </div>
-        <Pagination skip={skip} setSkip={setSkip} limit={limit} totalItems={totalProducts} />
+        <Pagination skip={skip} setSkip={setSkip} limit={limit} totalItems={totalProducts} loading={loading}/>
       </div>
     </>
   );

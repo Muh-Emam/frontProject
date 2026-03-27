@@ -47,7 +47,7 @@ function Profile({ user, setUser }) {
   return (
     <>
       <div className="container mt-5 d-flex justify-content-center">
-        <div className="card" style={{ maxWidth: "800px", borderRadius: "15px", overflow: "hidden" }}>
+        <div className="card mb-5" style={{ maxWidth: "800px", borderRadius: "15px", overflow: "hidden" }}>
           {/* Hero Header */}
           <div
             className="text-center py-4"

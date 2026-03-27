@@ -87,8 +87,14 @@ h6,
   color: grey;
   border-color: lightgrey;
 }
+.btn-pink-outline:focus {
+  color: white !important;
+}
 .btn-purple-outline:hover {
   color: white !important; /* Forces text to be white when background is pink */
+}
+.btn-pink-outline:active {
+  color: $pink;
 }
 
 .btn-purple-outline:disabled {

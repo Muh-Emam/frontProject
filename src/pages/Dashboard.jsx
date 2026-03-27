@@ -56,7 +56,7 @@ function Dashboard() {
       thumbnail: "https://picsum.photos/200",
     };
     setData([newProduct, ...data]);
-    setTotalItems((prev) => prev + 1);
+    setTotal(total + 1);
     setSkip(0);
     e.target.reset();
   }
@@ -64,11 +64,12 @@ function Dashboard() {
   return (
     <>
       <div className="d-flex flex-column flex-md-row" style={{ minHeight: "100vh" }}>
-        <aside className="bg-dark text-white p-3 shadow" style={{ width: "100%", maxWidth: "none" }}>
+        {/* SIDEBAR: Full Width in Mobile */}
+        <aside className="bg-dark text-white p-3 shadow col-12 col-md-auto">
           <div style={{ width: "250px" }} className="d-none d-md-block">
             <h4 className="fw-bold mb-4 text-secondary text-center">Control Panel</h4>
           </div>
-          <div className="nav flex-row flex-md-column nav-pills gap-2 justify-content-center justify-content-md-start overflow-auto">
+          <div className="nav flex-row flex-md-column nav-pills gap-2 justify-content-center justify-content-md-start overflow-auto pb-2 pb-md-0">
             <button
               className={`nav-link text-white text-start ${activeTab === "products" ? "bg-secondary" : ""}`}
               onClick={() => setActiveTab("products")}

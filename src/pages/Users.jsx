@@ -74,7 +74,7 @@ function Users({user}) {
           <div className="d-flex align-items-center gap-2">
             <div className="btn-group">
               <button
-                className="btn btn-outline-primary dropdown-toggle text-capitalize"
+                className="btn btn-outline-primary btn-pink-outline dropdown-toggle text-capitalize"
                 type="button"
                 data-bs-toggle="dropdown"
               >
@@ -203,7 +203,7 @@ function Users({user}) {
           {/* End Map */}
         </div>
 
-        <Pagination skip={skip} setSkip={setSkip} limit={limit} totalItems={totalUsers}/>
+        <Pagination skip={skip} setSkip={setSkip} limit={limit} totalItems={totalUsers} loading={loading}/>
       </div>
     </>
   );
