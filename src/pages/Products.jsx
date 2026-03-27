@@ -152,7 +152,6 @@ function Products() {
                     className="btn btn-outline-primary dropdown-toggle"
                     type="button"
                     data-bs-toggle="dropdown"
-                    style={{ backgroundColor: "#fb2e86", color: "#fff", borderColor: "#fb2e86" }}
                   >
                     {category ? category.charAt(0).toUpperCase() + category.slice(1).replace(/-/g, " ") : "Filter"}
                   </button>

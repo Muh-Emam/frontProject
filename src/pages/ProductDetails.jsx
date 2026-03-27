@@ -80,7 +80,7 @@ function ProductDetails() {
                 <button
                   className="btn px-5 py-3 fw-bold text-white shadow-sm"
                   style={{ backgroundColor: "#7E33E0", borderRadius: "8px", border: "none" }}
-                  onClick={() => dispatch(addToCart(item.id))}
+                  onClick={() => dispatch(addToCart(item))}
                 >
                   Add To Cart
                 </button>

@@ -119,7 +119,7 @@ function Profile({ user, setUser }) {
                 <label className="text-muted small fw-bold d-block text-uppercase">Location</label>
                 <div className="d-flex align-items-center mt-1">
                   <i className="bi bi-geo-alt-fill me-2 text-muted"></i>
-                  <span>London, UK</span>
+                  <span>{wholeUser.address.address}</span>
                 </div>
               </div>
               <div

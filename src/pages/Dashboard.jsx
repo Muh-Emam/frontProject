@@ -58,7 +58,7 @@ function Dashboard() {
     setData([newProduct, ...data]);
     setTotal(total + 1);
     setSkip(0);
-    e.target.reset();
+    event.target.reset();
   }
 
   return (
